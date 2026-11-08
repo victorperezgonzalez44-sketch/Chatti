@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_RIGHT" styleClass="TopBar">
+         <children>
+            <HBox alignment="CENTER" styleClass="UpperLeftCorner">
+               <children>
+                  <Label alignment="CENTER" styleClass="UpperLeftCorner" text="Ajustes" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="TopBarWhiteBoldText" text="Interfaz">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0" styleClass="LeftSideBar">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="9.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swProfileView" styleClass="LeftSideBarSettingButton" text="Perfil" />
+                        <Button disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="LeftSideBarSettingButton" text="Interfaz" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swAccountView" styleClass="LeftSideBarSettingButton" text="Cuenta" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swOtherView" styleClass="LeftSideBarSettingButton" text="Otros ajustes" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </VBox>
+                  <Separator prefWidth="200.0" styleClass="LeftSideBarSeparator" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#save" styleClass="ConfirmButton" text="Guardar">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" styleClass="CancelButton" text="Cancelar">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox styleClass="lightGreyRoundCorners">
+                     <children>
+                        <Label styleClass="SettingsTitle" text="Tema" />
+                        <HBox alignment="CENTER_LEFT" spacing="7.0">
+                           <children>
+                              <Circle radius="26.0" stroke="BLACK" strokeType="INSIDE">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" proportional="false">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.18431372940540314" green="0.9490196108818054" blue="0.11764705926179886" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Circle>
+                              <RadioButton fx:id="dayButton" mnemonicParsing="false" selected="true" text="Modo dia" />
+                              <Circle radius="26.0" stroke="BLACK" strokeType="INSIDE">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" proportional="false">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.2235294133424759" green="0.2235294133424759" blue="0.2235294133424759" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.45490196347236633" green="0.30588236451148987" blue="0.9843137264251709" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Circle>
+                              <RadioButton fx:id="nightButton" mnemonicParsing="false" text="Modo noche" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox styleClass="lightGreyRoundCorners">
+                     <children>
+                        <ToggleSwitch fx:id="customThemeSwitch" styleClass="ToggleSwitchBoldBlackText" text="Temas personalizados" />
+                        <Label text="Importe un archivo .css para personalizar un tema">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <TextField fx:id="cssField" disable="true" promptText="Ruta archivo css" HBox.hgrow="ALWAYS" />
+                              <Button disable="true" mnemonicParsing="false" onAction="#importCss" styleClass="ConfirmButton" text="Importar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,516 @@
+/*Main style to change the parent element. Not used in popups/overlays*/
+.Parent{
+    -fx-background-color: #FFFFFF;
+    -fx-spacing:20;
+}
+
+/*Styles limited to the top bar*/
+.TopBar{
+    -fx-background-color: #413F3F;
+    -fx-pref-height: 35;
+}
+.TopBarDarkerSection{
+    -fx-background-color: #363636;
+    -fx-pref-height: 35;
+}
+.UpperLeftCorner{
+    -fx-background-color: #363636;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20;
+    -fx-pref-width: 143;
+}
+.TopBarWhiteBoldText{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+.TopBarWhiteText{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15;
+}
+.TopBarIconButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/*Styles specific to the side bar*/
+.LeftSideBar{
+    -fx-background-color: #413F3F;
+    -fx-pref-width:143;
+}
+.LeftSideBarClickableElementHBox{
+    -fx-padding:5;
+    -fx-cursor:hand;
+}
+.convoList{
+    -fx-background-color:transparent;
+}
+.convoList .list-cell{
+    -fx-background-color: transparent;
+}
+.convoList .list-cell:filled:hover, .convoList .list-cell:selected{
+    -fx-background-color: #2C2C2C;
+}
+.LeftSideBarClickableElement:hover{
+    -fx-background-color:#2C2C2C;
+}
+.LeftSideBarClickableElementText{
+    -fx-text-fill:#FFFFFF;
+    -fx-font-size:15;
+}
+.LeftSideBarSeparator{
+    -fx-backgound-color:#D9D9D9;
+}
+.LeftSideBarButton{
+    -fx-background-color:#2C2C2C;
+    -fx-background-radius: 8;
+    -fx-text-fill:#F5F5F5;
+}
+.LeftSideBarButton:hover{
+    -fx-background-color:#1e1e1e;
+}
+.LeftSideBarSettingButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+}
+.LeftSideBarSettingButton:hover, .LeftSideBarSettingButton:disabled{
+    -fx-background-color: #1e1e1e;
+
+}
+/*Styles specific to the chat elements*/
+.OwnChatBubble{
+    -fx-background-color:#5DBE90;
+    -fx-background-radius: 17;
+    -fx-font-size: 15;
+    -fx-padding:5;
+}
+.OtherChatBubble{
+    -fx-background-color:#D9D9D9;
+    -fx-background-radius: 17;
+    -fx-font-size: 15;
+    -fx-padding:5;
+}
+.ChatInputArea{
+    -fx-background-color:#D9D9D9;
+    -fx-background-radius: 17;
+    -fx-border-color:transparent;
+    -fx-font-size: 15;
+    -fx-padding:2;
+}
+.ChatInputTextField{
+    -fx-background-color:transparent;
+}
+.ChatInputSendFileButton{
+    -fx-background-color:transparent;
+}
+.FileSentSpace{
+    -fx-background-color:#a7a7a7;
+    -fx-background-radius: 17;
+    -fx-font-size: 15;
+    -fx-padding:10;
+}
+.SendButton{
+    -fx-background-color:#2C2C2C;
+    -fx-background-radius:10;
+    -fx-text-fill:#F5F5F5;
+}
+
+/*Styles for elements with general uses*/
+.lightGreyRoundCorners{
+    -fx-background-color: #EAEAEA;
+    -fx-background-radius: 30;
+    -fx-padding: 20, 20, 5, 20;
+    -fx-spacing: 10;
+}
+.ButtonSection{
+    -fx-spacing:20;
+}
+.ConfirmButton{
+    -fx-background-color: #14AE5C;
+    -fx-background-radius: 8;
+    -fx-border-color: #2C2C2C;
+    -fx-border-radius: 7;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-background-insets: 0.6;
+}
+.ConfirmButton:hover{
+    -fx-background-color: #137d45;
+}
+.ConfirmButton:disabled{
+    -fx-abckground-color: #007940;
+}
+.CancelButton{
+    -fx-background-color: #EC221F;
+    -fx-background-radius: 8;
+    -fx-border-color: #2C2C2C;
+    -fx-border-radius: 7;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-background-insets: 0.6;
+}
+.CancelButton:hover{
+    -fx-background-color: #c72a27;
+}
+.PfpBackground{
+    -fx-fill: #B0B0B0;
+    -fx-padding: 10;
+    -fx-stroke: #000000;
+}
+TextField{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-text-fill: #000000;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+TextField:hover{
+    -fx-background-color: #d7d7d7;
+}
+PasswordField{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-text-fill: #000000;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+PasswordField:hover{
+    -fx-background-color: #d7d7d7;
+}
+TextArea{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-text-fill: #000000;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+TextArea .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    
+}
+TextArea .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+TextArea .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+TextArea:hover{
+    -fx-background-color: #d7d7d7;
+}
+TextArea:disabled, TextArea:disabled:hover{
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-border-color: transparent;
+}
+
+/*Styles used for conection status*/
+.ConectionInfoConected{
+    -fx-text-fill: #2AAE4D;
+    -fx-image: url("../imgs/Connected.png");
+}
+.ConectionInfoDisconected{
+    -fx-text-fill: #FC1010;
+    -fx-image: url("../imgs/Disconnected.png");
+}
+
+/*Styles specific to popups/overlays*/
+.PoppupParent{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius:11;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 15, 10, 15, 10;
+    -fx-spacing:5;
+}
+.PoppupTitle{
+    -fx-font-weight:bold;
+    -fx-font-size:15;
+    -fx-text-fill:#000000;
+}
+.PoppupWarningTitle{
+    -fx-font-weight:bold;
+    -fx-font-size:15;
+    -fx-text-fill:#FF0000;
+}
+.PoppupWarningText{
+    -fx-text-fill: #FF0000;
+    -fx-font-size:14;
+}
+.FileRouteButton{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 15;
+    -fx-background-insets:0.6;
+}
+.FileRouteButton:hover{
+    -fx-background-color:#b8b8b8;
+}
+/*Icons*/
+.UserMinusIcon{
+    -fx-image: url("../imgs/DeleteContact.png")
+}
+.LeaveIcon{
+    -fx-image: url("../imgs/Leave.png")
+}
+.UserPlusIcon{
+    -fx-image: url("../imgs/AddUser.png")
+}
+.BackRedIcon{
+    -fx-image: url("../imgs/BackRed.png")
+}
+.BackWhiteIcon{
+    -fx-image: url("../imgs/BackWhite.png")
+}
+.CommunityIcon{
+    -fx-image: url("../imgs/imagen.png")
+}
+.SettingsIcon{
+    -fx-image: url("../imgs/Settings.png")
+}
+.BackWhiteIcon{
+    -fx-image: url("../imgs/cancelB.png")
+}
+.PaperClipIcon{
+    -fx-image: url("../imgs/paperclip.png")
+}
+/*ToggleSwitches*/
+ToggleSwitch:selected .thumb-area{
+    -fx-background-color: #34C759;
+}
+ToggleSwitch .thumb-area{
+    -fx-background-color: #007AFF;
+}
+ToggleSwitch .thumb{
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 1.8;
+}
+ToggleSwitch .label{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17;
+}
+.ToggleSwitchBlackText .label{
+    -fx-text-fill: #000000;
+}
+.ToggleSwitchBoldBlackText .label{
+    -fx-text-fill: #000000;
+    -fx-font-weight:bold;
+    -fx-font-size:20;
+}
+/*Tags*/
+TagPane{
+    -fx-background-color:#2C2C2C;
+}
+TagPane .label{
+    -fx-text-fill:#FFFFFF;
+}
+TagPane .button{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-cursor:hand;
+}
+/*Radio Buttons*/
+RadioButton .radio{
+    -fx-border-color: #000000;
+    -fx-border-radius: 90;
+    -fx-background-color:transparent;
+}
+/*Light grey listViews that have round corners*/
+.lightGreyRoundCornersListView{
+    -fx-background-color: #EAEAEA;
+    -fx-background-radius: 30;
+}
+.lightGreyRoundCornersListView .list-cell{
+    -fx-background-color: transparent;
+}
+.lightGreyRoundCornersListView .list-cell:filled{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 30;
+}
+.lightGreyRoundCornersListView .list-cell:filled Label, .lightGreyRoundCornersListView .list-cell:selected Label{
+    -fx-text-fill: #000000;
+}
+.lightGreyRoundCornersListView .list-cell:filled .iconButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.lightGreyRoundCornersListView .list-cell:filled:hover{
+    -fx-background-color: #b0b0b0;
+}
+.lightGreyRoundCornersListView .virtual-flow{
+    -fx-background-color: transparent;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track{
+    -fx-background-color: #C1C1C1;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track-background{
+    -fx-background-color: transparent;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: #919191;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .increment-arrow{
+    -fx-background-color: transparent;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button .decrement-arrow{
+    -fx-background-color: transparent;
+}
+.lightGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+}
+/*Dark grey listview with round corners*/
+.darkGreyRoundCornersListView{
+    -fx-background-color: #cfcfcf;
+    -fx-background-radius: 30;
+}
+.darkGreyRoundCornersListView .list-cell{
+    -fx-background-color: transparent;
+}
+.darkGreyRoundCornersListView .list-cell:filled{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 30;
+}
+.darkGreyRoundCornersListView .list-cell:filled .blackText, .darkGreyRoundCornersListView .list-cell:selected Label{
+    -fx-text-fill: #000000;
+}
+.darkGreyRoundCornersListView .list-cell:filled .iconButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.darkGreyRoundCornersListView .list-cell:filled:hover{
+    -fx-background-color: #b0b0b0;
+}
+.darkGreyRoundCornersListView .virtual-flow{
+    -fx-background-color: transparent;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track{
+    -fx-background-color: #C1C1C1;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track-background{
+    -fx-background-color: transparent;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: #919191;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .increment-arrow{
+    -fx-background-color: transparent;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button .decrement-arrow{
+    -fx-background-color: transparent;
+}
+.darkGreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+}
+/*ListViews that blend in with a previous background*/
+.GreyRoundCornersListView{
+    -fx-background-color: transparent;
+    -fx-border-color: #A9A9A9;
+    -fx-border-radius: 15;
+}
+.GreyRoundCornersListView .list-cell{
+    -fx-background-color: transparent;
+}
+.GreyRoundCornersListView .list-cell:filled{
+    -fx-border-color: transparent transparent #000000 transparent;
+}
+.GreyRoundCornersListView .list-cell:filled .blackText, .GreyRoundCornersListView .list-cell:selected Label{
+    -fx-text-fill: #000000;
+}
+.GreyRoundCornersListView .list-cell:filled .iconButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.GreyRoundCornersListView .list-cell:filled:hover{
+    -fx-background-color: #828282;
+    -fx-background-radius: 15;
+}
+.GreyRoundCornersListView .virtual-flow{
+    -fx-background-color: transparent;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track{
+    -fx-background-color: #C1C1C1;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .track-background{
+    -fx-background-color: transparent;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: #919191;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .increment-arrow{
+    -fx-background-color: transparent;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button .decrement-arrow{
+    -fx-background-color: transparent;
+}
+.GreyRoundCornersListView .virtual-flow .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+}
+/*SearchBars*/
+.SearchBar{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius:20;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius:20;
+}
+.SearchBar TextField{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+}
+.SearchBar Button{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+}
+/*Logo from the welcome-view.fxml*/
+.ChattiLogo{
+    -fx-text-fill: #000000;
+    -fx-font-size: 25;
+    -fx-spacing: 5;
+    -fx-image: url("../imgs/LogoVerde.png");
+}
+/*Error texts shown when an error when signing up/logging in happens or warning message in the random-chat*/
+.WarningText{
+    -fx-text-fill: #FF0000;
+}
+/*Title of a settings section*/
+.SettingsTitle{
+    -fx-font-size:20;
+    -fx-font-weight: bold;
+}
+/*The own username when looking at your profile in settings*/
+#userName{
+    -fx-font-size:30;
+    -fx-font-weight:bold;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+#accountName{
+    -fx-font-size: 15;
+}
+/*Textfield that shows the route for a custom css*/
+#cssField{
+    -fx-background-color:#ffffff;
+    -fx-background-radius:13;
+    -fx-background-insets:0.6;
+    -fx-border-color:#383838;
+    -fx-border-radius:13;
+    -fx-font-size:15;
+}
+/*Darker half for scenes segmented in 2 sections*/
+.DarkerHalf{
+    -fx-background-color: #dedede;
+}
+/*Placeholder for missing images*/
+.Placeholder{
+    -fx-image: url("../imgs/Placeholder.png")
+}
+/*Cheat Sheet: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html  */

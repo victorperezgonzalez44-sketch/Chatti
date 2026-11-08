@@ -1,0 +1,329 @@
+/*Main style to change the parent element. Not used in popups/overlays*/
+.Parent{
+    -fx-background-color: #4D4D4D;
+    -fx-spacing:20;
+}
+
+/*Styles limited to the top bar*/
+.TopBar{
+    -fx-background-color: #413F3F;
+    -fx-max-height:15p;
+    -fx-pref-height: 35;
+}
+.UpperLeftCorner{
+    -fx-background-color: #363636;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20;
+    -fx-pref-width: 143;
+}
+.TopBarWhiteBoldText{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+.TopBarWhiteText{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15;
+}
+.TopBarIconButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/*Styles specific to the side bar*/
+.LeftSideBar{
+    -fx-background-color: #413F3F;
+    -fx-pref-width:143;
+}
+.LeftSideBarClickableElementHBox{
+    -fx-padding:5;
+    -fx-cursor:hand;
+}
+.convoList{
+    -fx-background-color:transparent;
+}
+.convoList .list-cell:hover, .convoList .list-cell:selected{
+    -fx-background-color: #2C2C2C
+}
+.LeftSideBarClickableElement:hover{
+    -fx-background-color:#2C2C2C;
+}
+.LeftSideBarClickableElementText{
+    -fx-text-fill:#FFFFFF;
+    -fx-font-size:15;
+}
+.LeftSideBarSeparator{
+    -fx-backgound-color:#D9D9D9;
+}
+.LeftSideBarButton{
+    -fx-background-color:#2C2C2C;
+    -fx-background-radius: 8;
+    -fx-text-fill:#F5F5F5;
+}
+.LeftSideBarButton:hover{
+    -fx-background-color:#1e1e1e;
+}
+/*Styles specific to the chat elements*/
+.OwnChatBubble{
+    -fx-background-color:#bd80fe;
+    -fx-background-radius: 17;
+    -fx-font-size: 15;
+    -fx-padding:10;
+}
+.OtherChatBubble{
+    -fx-background-color:#7d7d7d;
+    -fx-background-radius: 17;
+    -fx-font-size: 15;
+    -fx-padding:10;
+}
+.ChatInputArea{
+    -fx-background-color:#7d7d7d;
+    -fx-background-radius: 17;
+    -fx-border-color:transparent;
+    -fx-font-size: 15;
+    -fx-padding:2;
+}
+.ChatInputTextField{
+    -fx-background-color:transparent;
+}
+.ChatInputSendFileButton{
+    -fx-background-color:transparent;
+}
+.FileSentSpace{
+    -fx-background-color:#575757;
+    -fx-background-radius: 17;
+    -fx-text-fill:#FFFFFF;
+    -fx-font-size: 15;
+    -fx-padding:10;
+}
+.SendButton{
+    -fx-background-color:#7D27E7;
+    -fx-background-radius:10;
+    -fx-text-fill:#000000;
+}
+
+/*Styles for elements with general uses*/
+.lightGreyRoundCorners{
+    -fx-background-color: #585757;
+    -fx-background-radius: 30;
+    -fx-padding: 20, 20, 5, 20;
+    -fx-spacing: 10;
+}
+.ButtonSection{
+    -fx-spacing:20;
+}
+.ConfirmButton{
+    -fx-background-color: #7D27E7;
+    -fx-background-radius: 8;
+    -fx-border-color: #2C2C2C;
+    -fx-border-radius: 7;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-background-insets: 0.6;
+}
+.ConfirmButton:hover{
+    -fx-background-color: #6122ae;
+}
+.CancelButton{
+    -fx-background-color: #EC221F;
+    -fx-background-radius: 8;
+    -fx-border-color: #2C2C2C;
+    -fx-border-radius: 7;
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+    -fx-background-insets: 0.6;
+}
+.CancelButton:hover{
+    -fx-background-color: #c72a27;
+}
+.PfpBackground{
+    -fx-fill: #3C3C3C;
+    -fx-padding: 10;
+    -fx-stroke: #000000;
+}
+TextField{
+    -fx-background-color: #3C3C3C;
+    -fx-background-radius: 8;
+    -fx-text-fill: #F3F3F3;
+    -fx-prompt-text-fill: #a7a49c;
+    -fx-border-color: #000000;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+TextField:hover{
+    -fx-background-color: #2b2b2b;
+}
+PasswordField{
+    -fx-background-color: #3C3C3C;
+    -fx-background-radius: 8;
+    -fx-text-fill: #F3F3F3;
+    -fx-prompt-text-fill: #a7a49c;
+    -fx-border-color: #000000;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+PasswordField:hover{
+    -fx-background-color: #2b2b2b;
+}
+TextArea{
+    -fx-background-color: #3C3C3C;
+    -fx-background-radius: 8;
+    -fx-text-fill: #F3F3F3;
+    -fx-prompt-text-fill: #a7a49c;
+    -fx-border-color: #000000;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+TextArea .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+TextArea .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+TextArea .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+TextArea:hover{
+    -fx-background-color: #2b2b2b;
+}
+
+/*Styles used for conection status*/
+.ConectionInfoConected{
+    -fx-text-fill: #2AAE4D;
+    -fx-image: url("../imgs/Connected.png");
+}
+.ConectionInfoDisconected{
+    -fx-text-fill: #FC1010;
+    -fx-image: url("../imgs/Disconnected.png");
+}
+
+/*Styles specific to popups/overlays*/
+.PoppupParent{
+    -fx-background-color: #4D4D4D;
+    -fx-background-radius:11;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 15, 10, 15, 10;
+    -fx-spacing:5;
+}
+.PoppupTitle{
+    -fx-font-weight:bold;
+    -fx-font-size:15;
+    -fx-text-fill:#FFFFFF;
+}
+.PoppupWarningTitle{
+    -fx-font-weight:bold;
+    -fx-font-size:15;
+    -fx-text-fill:#FF0000;
+}
+.FileRouteButton{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 15;
+    -fx-background-insets:0.6;
+}
+.FileRouteButton:hover{
+    -fx-background-color:#b8b8b8;
+}
+/*Icons*/
+.UserMinusIcon{
+    -fx-image: url("../imgs/DeleteContact.png")
+}
+.LeaveIcon{
+    -fx-image: url("../imgs/Leave.png")
+}
+.UserPlusIcon{
+    -fx-image: url("../imgs/AddUser.png")
+}
+.BackRedIcon{
+    -fx-image: url("../imgs/BackRed.png")
+}
+/*ToggleSwitches*/
+ToggleSwitch:selected .thumb-area{
+    -fx-background-color: #34C759;
+}
+ToggleSwitch .thumb-area{
+    -fx-background-color: #007AFF;
+}
+ToggleSwitch .thumb{
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 1.8;
+}
+ToggleSwitch .label{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17;
+}
+/*Tags*/
+TagPane{
+    -fx-background-color:#7535B9;
+}
+TagPane .label{
+    -fx-text-fill:#FFFFFF;
+}
+TagPane .button{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-cursor:hand;
+}
+/*ScrollBar*/
+ScrollBar{
+    -fx-background-color:#C1C1C1;
+}
+ScrollBar .increment-arrow{
+    -fx-background-color: transparent;
+}
+ScrollBar .decrement-arrow{
+    -fx-background-color: transparent;
+}
+ScrollBar .thumb{
+    -fx-background-color:#7f7f7f;
+}
+/*Logo from the welcome-view.fxml*/
+.ChattiLogo{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 25;
+    -fx-spacing: 5;
+    -fx-image: url("../imgs/LogoMorado.png");
+}
+
+/*Error texts shown when an error when signing up/logging in happens or warning message in the random-chat*/
+.WarningText{
+    -fx-text-fill: #FF0000;
+}
+
+/*Title of a settings section*/
+.SettingsTitle{
+    -fx-font-size:25;
+    -fx-text-fill:#FFFFFF;
+}
+
+/*Turning labels into color white for better contrast*/
+.WhiteLabelForDarkCss{
+    -fx-text-fill:#FFFFFF;
+}
+
+/*The own username when looking at your profile in settings*/
+#OwnUsernameSettings{
+    -fx-font-size:30;
+    -fx-font-weight:bold;
+    -fx-text-fill:#FFFFFF;
+}
+
+/*Textfield that shows the route for a custom css*/
+#CustomCssTextField{
+    -fx-background-color:#3C3C3C;
+    -fx-background-radius:13;
+    -fx-background-insets:0.6;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color:#000000;
+    -fx-border-radius:13;
+    -fx-font-size:15;
+}
+/*Placeholder for missing images*/
+.Placeholder{
+    -fx-image: url("../imgs/Placeholder.png")
+}
+/*Cheat Sheet: https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html  */

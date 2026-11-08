@@ -1,0 +1,400 @@
+@startuml
+class ies.dam.client.chatticlient.controllers.chat.popup.LeaveGroupController {
++ void leaveGroup(ActionEvent)
++ void closePopup()
+}
+
+class ies.dam.client.chatticlient.ClientApplication {
++ {static} Stage stage
++ {static} Stage popUpStage
+- {static} String serverAddress
+- {static} int serverPort
++ {static} Socket socket
+- {static} Map<String,String> settingsTemp
+- {static} Map<String,String> settingsOriginal
++ {static} DataInputStream dataInputStream
++ {static} DataOutputStream dataOutputStream
+- {static} String username
+- {static} String hashedPassword
+- {static} boolean isPopUpOpen
++ {static} boolean connected
++ {static} boolean hasConnected
++ {static} Scenes currentScene
++ {static} Boolean heartBeatStarted
++ void start(Stage)
++ {static} void main(String[])
++ {static} void loadScene(Scenes)
++ {static} void closePopup()
++ {static} void loadPopup(Scenes)
++ {static} String hashedPassword(String)
++ {static} String newHashedPassword(byte[],String)
++ {static} String getUsername()
++ {static} void setUsername(String)
++ {static} String getHashedPassword()
++ {static} void setHashedPassword(String)
++ {static} void showAlert(Alert.AlertType,String,String,String)
++ {static} boolean getIsPopUpOpen()
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.new_chat.CreateGroupController {
+- TextField groupNameField
+- TextField groupDescriptionField
+- Circle groupImage
+- ListView userRemoveListView
+- TextField searchField
+- ListView addUsersListView
+# ObservableList<InfoModel> usersOutOfGroupList
+# ObservableList<InfoModel> usersInGroupList
+- Image image
+- File chosenImage
++ void initialize()
++ void selectImage(ActionEvent)
++ void createGroup(ActionEvent)
++ void goBack(ActionEvent)
++ void clearBar(ActionEvent)
+- void writeExitByte()
++ void addToGroupList(InfoModel)
++ void removeFromGroup(InfoModel)
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.popup.DeleteContactController {
++ void deleteContact(ActionEvent)
++ void closePopup(ActionEvent)
+}
+
+class ies.dam.client.chatticlient.controllers.settings.user.SettingsInterfaceController {
+}
+class ies.dam.client.chatticlient.controllers.chat.new_chat.AddContactController {
+- TextField accountNameField
+- Label infoLabel
+- ListView requestListView
+# ObservableList<InfoModel> requestList
++ void initialize()
++ void sendRequest(ActionEvent)
++ void goBack(ActionEvent)
+- void writeExitByte()
+}
+
+
+class ies.dam.client.chatticlient.controllers.startup.LoginController {
++ TextField userField
++ PasswordField passField
++ Label warningText
++ void initialize()
++ void login(ActionEvent)
+- void writeExitByte()
++ void cancelLogin(ActionEvent)
++ void mailDialogue(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.models.ComThread {
+}
+class ies.dam.client.chatticlient.controllers.chat.community.new_com.JoinCommunityController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.ThreadDeleteController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_owner.CommunityDeleteController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityModerationController {
+}
+class ies.dam.client.chatticlient.models.controllers.Perms {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityOtherController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_owner.CommunityOwnerChangeController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.BlackListController {
+}
+class ies.dam.client.chatticlient.controllers.chat.popup.FileSentController {
++ void closePopup(ActionEvent)
+}
+
+class ies.dam.client.chatticlient.models.Group {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_mod.LogsController {
+}
+abstract class ies.dam.client.chatticlient.controllers.chat.Chattable {
+# ListView<InfoModel> convoList
+# ToggleSwitch toggleSwitch
+# TextField messageField
++ VBox chatBox
++ ScrollPane scrollPane
+# String message
+# ObservableList<InfoModel> observableList
++ void initialize()
++ void sendMessage(ActionEvent)
++ void enterMessage(KeyEvent)
++ void embedFile(ActionEvent)
++ void settingSwitch(ActionEvent)
+# void writeExitByte()
+# void appendToChatBox(String,String)
+# void handleMessages()
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.community.new_com.CreateCommunityController {
+}
+class ies.dam.client.chatticlient.controllers.startup.popup.EmailAuthController {
++ TextField codeField
++ Label warningLabel
++ void confirm(ActionEvent)
++ void cancel(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.ModifyThreadController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.BlockUserController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_mod.BannedListController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.SettingsProfileController {
+}
+class ies.dam.client.chatticlient.controllers.startup.WelcomeController {
+- {static} boolean exit
++ StatusComponent statusComponent
++ void initialize()
+- void makeConnect()
++ void heartBeat()
++ {static} void connect()
+- void updateConnectionStatus(String)
++ {static} void switchExit()
++ void login(ActionEvent)
++ void signUp(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.NewThreadController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.PasswordAccountDeleteController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityPermitsController {
+}
+class ies.dam.client.chatticlient.models.Community {
+}
+class ies.dam.client.chatticlient.controllers.chat.GroupChatController {
+- Circle profilePicture
+- Label groupName
++ void initialize()
++ void addUserToGroup()
++ void exitGroup()
++ void communitySwitch()
++ void sendMessage(ActionEvent)
++ void enterMessage(KeyEvent)
++ void SettingSwitch()
++ void newGroup()
++ void randomChat()
++ void embedFile()
++ void chatSwitch(MouseEvent)
+}
+
+
+class ies.dam.client.chatticlient.models.Convo {
++ void run()
+}
+
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityProfileController {
+}
+enum ies.dam.client.chatticlient.models.UserType {
++  DEVELOPER
++  CREATOR
++  ADMIN
++  MOD
++  USER
+}
+
+enum ies.dam.client.chatticlient.models.controllers.Visibility {
++  VISIBLE
++  INVISIBLE
+- String lowerCaseName
++ String getLowerCaseName()
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.community.popup.ExitCommunityController {
+}
+class ies.dam.client.chatticlient.controllers.chat.community.CommunityChatController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityThreadsController {
+}
+enum ies.dam.client.chatticlient.Scenes {
++  WELCOME_VIEW
++  LOGIN_VIEW
++  SIGNUP_VIEW
++  CHAT_VIEW
++  GROUP_CHAT_VIEW
++  RANDOM_CHAT
++  DELETE_CONTACT
++  LEAVE_GROUP
++  FILE_SELECT
++  FILE_SENT
++  ADD_TO_GROUP
++  ADD_CONTACT
++  CREATE_GROUP
++  MAIL_DIALOGUE
++  MAIL_CONFIRMATION
++  PASSWORD_CHANGE
+- String name
+- String fxmlName
+- int width
+- int height
+- int signal
++ String getName()
++ String getFxmlName()
++ int getWidth()
++ int getHeight()
++ int getSignal()
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.MainChatController {
++ Circle profilePicture
++ Label username
++ Label accountName
++ void initialize()
++ void deleteUser(ActionEvent)
++ void communitySwitch(ActionEvent)
++ void settingSwitch(ActionEvent)
++ void newChat(ActionEvent)
++ void randomChat(ActionEvent)
++ void embedFile(ActionEvent)
++ void sendMessage(ActionEvent)
++ void enterMessage(KeyEvent)
++ void deleteChat()
++ void groupSwitch(MouseEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.settings.user.popup.SaveSettingsController {
+}
+class ies.dam.client.chatticlient.controllers.chat.popup.AddToGroupController {
+- TextField SearchField
+- ListView usersList
++ void initialize()
++ void clearField(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.community.popup.MemberListController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.UnblockUserController {
+}
+class ies.dam.client.chatticlient.controllers.chat.popup.FileSelectController {
+- Button fileButton
+- File selectedFile
++ void selectFile(ActionEvent)
++ void sendFile(ActionEvent)
++ void cancel(ActionEvent)
+}
+
+
+abstract class ies.dam.client.chatticlient.controllers.settings.user.UModifiable {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_owner.CommunityOwnerController {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.CommunityProfileOthersController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.ChangePasswordController {
+}
+class ies.dam.client.chatticlient.controllers.startup.popup.PasswordChange {
++ PasswordField password
++ PasswordField confirmPassword
++ Label warningLabel
++ void confirm(ActionEvent)
++ void cancel(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_perms.BanUserController {
+}
+abstract class ies.dam.client.chatticlient.models.ExtConvo {
+}
+class ies.dam.client.chatticlient.controllers.settings.community.popup.com_mod.UnbanUserController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.SettingsOtherController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.popup.ConfirmDeleteController {
+}
+class ies.dam.client.chatticlient.controllers.settings.user.SettingsAccountController {
+}
+class ies.dam.client.chatticlient.controllers.startup.popup.EmailController {
++ TextField emailField
++ Label warningLabel
+- void initialize()
++ void sendMail(ActionEvent)
++ void cancel(ActionEvent)
+}
+
+
+class ies.dam.client.chatticlient.controllers.chat.RandomChatController {
++ Circle profilePicture
++ Label username
++ Button stateButton
+- EventHandler<ActionEvent> startEvent
+- EventHandler<ActionEvent> stopEvent
++ void initialize()
++ void addRandom()
++ void skipRandom()
++ void startRandom()
++ void stopRandom()
++ void goBack()
++ void sendMessage(ActionEvent)
++ void enterMessage(KeyEvent)
++ void appendToChatBoxAnon(String)
+}
+
+
+abstract class ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.Allowable {
+}
+class ies.dam.client.chatticlient.controllers.startup.SignUpController {
++ TextField accountNameField
++ Label accNameWarning
++ Circle profilePic
++ PasswordField passField
++ TextField usernameField
++ TextField mailField
++ PasswordField confirmPassField
++ TextArea descriptionArea
++ StatusComponent statusComponent
++ Button createAcc
+- Image image
+- byte[] defaultImageBytes
+- File chosenImage
++ void initialize()
++ void changePfp(ActionEvent)
++ void cancelCreate(ActionEvent)
+- void writeExitByte()
++ void createAcc(ActionEvent)
+- boolean uncheckedFields()
+}
+
+
+abstract class ies.dam.client.chatticlient.controllers.settings.community.CModifiable {
+}
+
+
+javafx.application.Application <|-- ies.dam.client.chatticlient.ClientApplication
+ies.dam.client.chatticlient.controllers.settings.user.UModifiable <|-- ies.dam.client.chatticlient.controllers.settings.user.SettingsInterfaceController
+ies.dam.client.chatticlient.models.ExtConvo <|-- ies.dam.client.chatticlient.models.ComThread
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityModerationController
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityOtherController
+ies.dam.client.chatticlient.models.ExtConvo <|-- ies.dam.client.chatticlient.models.Group
+ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.Allowable <|-- ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.ModifyThreadController
+ies.dam.client.chatticlient.controllers.settings.user.UModifiable <|-- ies.dam.client.chatticlient.controllers.settings.user.SettingsProfileController
+ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.Allowable <|-- ies.dam.client.chatticlient.controllers.settings.community.popup.com_threads.NewThreadController
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityPermitsController
+ies.dam.client.chatticlient.controllers.chat.Chattable <|-- ies.dam.client.chatticlient.controllers.chat.GroupChatController
+ies.dam.client.chatticlient.models.Runnable <|.. ies.dam.client.chatticlient.models.Convo
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityProfileController
+ies.dam.client.chatticlient.controllers.chat.Chattable <|-- ies.dam.client.chatticlient.controllers.chat.community.CommunityChatController
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityThreadsController
+ies.dam.client.chatticlient.controllers.chat.Chattable <|-- ies.dam.client.chatticlient.controllers.chat.MainChatController
+ies.dam.client.chatticlient.controllers.settings.community.CModifiable <|-- ies.dam.client.chatticlient.controllers.settings.community.CommunityProfileOthersController
+ies.dam.client.chatticlient.models.Convo <|-- ies.dam.client.chatticlient.models.ExtConvo
+ies.dam.client.chatticlient.controllers.settings.user.UModifiable <|-- ies.dam.client.chatticlient.controllers.settings.user.SettingsOtherController
+ies.dam.client.chatticlient.controllers.settings.user.UModifiable <|-- ies.dam.client.chatticlient.controllers.settings.user.SettingsAccountController
+ies.dam.client.chatticlient.controllers.chat.Chattable <|-- ies.dam.client.chatticlient.controllers.chat.RandomChatController
+@enduml

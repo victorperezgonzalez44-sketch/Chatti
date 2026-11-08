@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.chat.new_chat.AddContactController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="DarkerHalf" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="TopBarDarkerSection">
+                    <children>
+                        <Label styleClass="TopBarWhiteBoldText" text="Enviar solicitud de contacto" />
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Nombre de cuenta" />
+                        <TextField fx:id="accountNameField" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Nombre de cuenta" />
+                        <Button fx:id="send" mnemonicParsing="false" onAction="#sendRequest" styleClass="ConfirmButton" text="Enviar solicitud" />
+                        <Label fx:id="infoLabel" text="Solicitud enviada" visible="false" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="TopBar">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="TopBarWhiteBoldText" text="Solicitudes de contacto" />
+                            </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#goBack" styleClass="TopBarIconButton">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" styleClass="BackWhiteIcon" />
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <ListView fx:id="requestListView" prefHeight="200.0" prefWidth="200.0" styleClass="lightGreyRoundCornersListView" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets bottom="11.0" left="11.0" right="11.0" top="30.0" />
+                    </VBox.margin>
+                </ListView>
+            </children>
+        </VBox>
+    </children>
+</HBox>

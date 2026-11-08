@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ies.dam.status_component.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="Parent" stylesheets="@../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.startup.WelcomeController">
+    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="600.0" styleClass="TopBar">
+        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="143.0" styleClass="UpperLeftCorner" text="Bienvenido" />
+        <HBox maxHeight="-Infinity" prefWidth="457.0" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="600.0" styleClass="ChattiLogo">
+        <VBox.margin>
+            <Insets bottom="5.0" top="8.0" />
+        </VBox.margin>
+        <ImageView fitHeight="57.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="ChattiLogo" />
+        <Label text="Chatti">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+    </HBox>
+    <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefWidth="569.0" styleClass="lightGreyRoundCorners" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="10.0" left="15.0" right="15.0" />
+        </VBox.margin>
+        <Label text="¿Ya dispones de una cuenta?">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Label>
+        <Button fx:id="login" mnemonicParsing="false" onAction="#login" styleClass="ConfirmButton" text="Inicia Sesión">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Button>
+        <Label text="¿Aún no has creado una cuenta?">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Label>
+        <Button fx:id="signup" mnemonicParsing="false" onAction="#signUp" styleClass="ConfirmButton" text="Registrate">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Button>
+        <HBox alignment="BOTTOM_LEFT" prefWidth="530.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+            <StatusComponent fx:id="statusComponent" />
+        </HBox>
+    </VBox>
+</VBox>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="PoppupParent" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.chat.popup.DeleteContactController">
+   <children>
+      <Label styleClass="PoppupWarningTitle" text="¿Eliminar contacto?" />
+      <HBox alignment="CENTER" styleClass="ButtonSection">
+         <children>
+            <Button fx:id="confirmDelete" mnemonicParsing="false" onAction="#deleteContact" styleClass="ConfirmButton" text="Eliminar" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#closePopup" styleClass="CancelButton" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

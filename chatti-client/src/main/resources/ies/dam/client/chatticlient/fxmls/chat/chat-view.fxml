@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import org.controlsfx.control.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.chat.MainChatController">
+   <HBox alignment="CENTER_RIGHT" styleClass="TopBar">
+      <HBox alignment="CENTER" styleClass="UpperLeftCorner">
+         <ToggleSwitch alignment="CENTER" contentDisplay="CENTER" disable="true" onMouseClicked="#groupSwitch" selected="true" text="Usuarios" />
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="3.0" />
+         </padding>
+         <Circle fx:id="profilePicture" fill="DODGERBLUE" radius="17.0" stroke="BLACK" strokeType="INSIDE" styleClass="PfpBackground" />
+         <Label fx:id="username" styleClass="TopBarWhiteBoldText" text="Usuario">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Label>
+         <Label fx:id="accountName" styleClass="TopBarWhiteText" text="\@Cuenta">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Label>
+      </HBox>
+      <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteUser" styleClass="TopBarIconButton">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="UserMinusIcon" />
+         </graphic>
+      </Button>
+      <Button disable="true" mnemonicParsing="false" onAction="#communitySwitch" styleClass="TopBarIconButton">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="Placeholder" />
+         </graphic>
+      </Button>
+      <Button disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#settingSwitch" styleClass="TopBarIconButton">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="SettingsIcon" />
+         </graphic>
+      </Button>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="416.0" prefWidth="836.0" VBox.vgrow="ALWAYS">
+      <VBox alignment="TOP_CENTER" spacing="5.0" styleClass="LeftSideBar">
+         <padding>
+            <Insets bottom="7.0" />
+         </padding>
+         <ListView fx:id="convoList" prefHeight="200.0" prefWidth="200.0" styleClass="convoList" VBox.vgrow="ALWAYS" />
+         <Separator maxWidth="1.7976931348623157E308" styleClass="LeftSideBarSeparator" />
+         <Button fx:id="newchat" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#newChat" styleClass="LeftSideBarButton" text="Nuevo">
+            <VBox.margin>
+               <Insets left="9.0" right="9.0" />
+            </VBox.margin>
+         </Button>
+         <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#randomChat" styleClass="LeftSideBarButton" text="Chat Aleatorio">
+            <VBox.margin>
+               <Insets left="9.0" right="9.0" />
+            </VBox.margin>
+         </Button>
+      </VBox>
+      <VBox alignment="BOTTOM_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+         <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <content>
+               <VBox fx:id="chatBox" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3" />
+            </content>
+         </ScrollPane>
+         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="451.0" spacing="5.0">
+            <HBox prefHeight="12.0" prefWidth="394.0" styleClass="ChatInputArea" HBox.hgrow="ALWAYS">
+               <TextField fx:id="messageField" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#enterMessage" promptText="Escribe un mensaje" styleClass="ChatInputTextField" HBox.hgrow="ALWAYS" />
+               <Button disable="true" mnemonicParsing="false" onAction="#embedFile" prefHeight="30.0" prefWidth="22.0" styleClass="ChatInputSendFileButton">
+                  <graphic>
+                     <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" styleClass="PaperClipIcon" />
+                  </graphic>
+               </Button>
+            </HBox>
+            <Button fx:id="send" mnemonicParsing="false" onAction="#sendMessage" styleClass="SendButton" text="Enviar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </HBox>
+      </VBox>
+   </HBox>
+</VBox>

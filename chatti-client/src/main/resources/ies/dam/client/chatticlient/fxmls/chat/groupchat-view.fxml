@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import org.controlsfx.control.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.chat.GroupChatController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" styleClass="TopBar">
+         <children>
+            <HBox alignment="CENTER" styleClass="UpperLeftCorner">
+               <children>
+                  <ToggleSwitch alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#chatSwitch" text="Grupos" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Circle fx:id="profilePicture" fill="DODGERBLUE" radius="17.0" stroke="BLACK" strokeType="INSIDE" styleClass="PfpBackground" />
+                  <Label fx:id="groupName" styleClass="TopBarWhiteBoldText" text="Grupo">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#addUserToGroup" styleClass="TopBarIconButton">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="UserPlusIcon" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#exitGroup" styleClass="TopBarIconButton">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="LeaveIcon" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#communitySwitch" styleClass="TopBarIconButton">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="Placeholder" />
+               </graphic>
+            </Button>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SettingSwitch" styleClass="TopBarIconButton">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" styleClass="SettingsIcon" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="416.0" prefWidth="836.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="5.0" styleClass="LeftSideBar">
+               <children>
+                  <ListView fx:id="convoList" prefHeight="200.0" prefWidth="200.0" styleClass="convoList" VBox.vgrow="ALWAYS" />
+                  <Separator maxWidth="1.7976931348623157E308" styleClass="LeftSideBarSeparator" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#newGroup" styleClass="LeftSideBarButton" text="Nuevo">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#randomChat" styleClass="LeftSideBarButton" text="Chat Aleatorio">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="chatBox" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3"/>
+                     </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="451.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="12.0" prefWidth="394.0" styleClass="ChatInputArea" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="messageField" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#enterMessage" promptText="Escribe un mensaje" styleClass="ChatInputTextField" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" onAction="#embedFile" prefHeight="30.0" prefWidth="22.0" styleClass="ChatInputSendFileButton">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" styleClass="PaperClipIcon" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#sendMessage" styleClass="SendButton" text="Enviar" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

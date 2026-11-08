@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="322.0" styleClass="PoppupParent" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.startup.popup.EmailController">
+   <children>
+      <Label styleClass="PoppupTitle" text="Ingrese un correo">
+         <VBox.margin>
+            <Insets left="13.0" right="13.0" top="13.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefWidth="289.0" text="Si la dirección esta asociada a una cuenta existente, recibira un mensaje en su bandeja de entrada." wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+      <TextField fx:id="emailField" prefHeight="28.0" prefWidth="258.0" />
+      <Label fx:id="warningLabel" textFill="RED" />
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" styleClass="ButtonSection">
+         <children>
+            <Button mnemonicParsing="false" onAction="#sendMail" styleClass="ConfirmButton" text="Envíar correo" />
+            <Button mnemonicParsing="false" onAction="#cancel" styleClass="CancelButton" text="Cancelar" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="13.0" left="13.0" right="13.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

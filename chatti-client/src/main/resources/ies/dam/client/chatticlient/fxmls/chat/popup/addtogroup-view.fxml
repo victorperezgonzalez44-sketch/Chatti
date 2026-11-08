@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" spacing="6.0" styleClass="PoppupParent" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="ies.dam.client.chatticlient.controllers.chat.popup.AddToGroupController" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="PoppupTitle" text="Añadir al grupo" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" styleClass="TopBarIconButton">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" styleClass="BackRedIcon" />
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" styleClass="SearchBar">
+         <children>
+            <TextField fx:id="SearchField" promptText="Buscar" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#clearField" text="X">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <ListView fx:id="usersList" minWidth="-Infinity" prefHeight="400.0" prefWidth="388.0" styleClass="lightGreyRoundCornersListView">
+         <VBox.margin>
+            <Insets top="6.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+      </ListView>
+   </children>
+</VBox>

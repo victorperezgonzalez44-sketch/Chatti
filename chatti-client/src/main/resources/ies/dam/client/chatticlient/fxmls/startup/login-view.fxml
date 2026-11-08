@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="206.0" styleClass="PoppupParent" stylesheets="@../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ies.dam.client.chatticlient.controllers.startup.LoginController">
+    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="PoppupTitle" text="Iniciar sesión">
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+    </Label>
+    <Label maxWidth="1.7976931348623157E308" styleClass="WhiteLabelForDarkCss" text="Nombre de cuenta" />
+    <TextField fx:id="userField" maxWidth="1.7976931348623157E308" promptText="Nombre" />
+    <Label maxWidth="1.7976931348623157E308" styleClass="WhiteLabelForDarkCss" text="Contraseña" />
+    <PasswordField fx:id="passField" promptText="Contraseña" />
+    <Label fx:id="warningText" styleClass="WarningText" text="Cuenta o contraseña incorrecto" />
+   <Hyperlink style="-fx-text-fill: #00FF00;" text="¿Has olvidado tu contraseña?" onAction="#mailDialogue"/>
+    <HBox alignment="CENTER" styleClass="ButtonSection">
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#login" styleClass="ConfirmButton" text="Iniciar sesión" />
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelLogin" styleClass="CancelButton" text="Cancelar" />
+    </HBox>
+</VBox>

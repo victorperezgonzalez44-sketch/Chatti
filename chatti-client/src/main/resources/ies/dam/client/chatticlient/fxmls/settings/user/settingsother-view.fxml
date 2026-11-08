@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../styles/day-ui-mode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_RIGHT" styleClass="TopBar">
+         <children>
+            <HBox alignment="CENTER" styleClass="UpperLeftCorner">
+               <children>
+                  <Label alignment="CENTER" styleClass="UpperLeftCorner" text="Ajustes" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="TopBarWhiteBoldText" text="Otros ajustes">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0" styleClass="LeftSideBar">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="9.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swProfileView" styleClass="LeftSideBarSettingButton" text="Perfil" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swInterfaceView" styleClass="LeftSideBarSettingButton" text="Interfaz" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#swAccountView" styleClass="LeftSideBarSettingButton" text="Cuenta" />
+                        <Button disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="LeftSideBarSettingButton" text="Otros ajustes" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </VBox>
+                  <Separator prefWidth="200.0" styleClass="LeftSideBarSeparator" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#save" styleClass="ConfirmButton" text="Guardar">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" styleClass="CancelButton" text="Cancelar">
+                     <VBox.margin>
+                        <Insets left="9.0" right="9.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+               </padding>
+               <children>
+                  <VBox styleClass="lightGreyRoundCorners">
+                     <children>
+                        <Label styleClass="SettingsTitle" text="Notificaciones" />
+                        <ToggleSwitch fx:id="dmNotis" styleClass="ToggleSwitchBlackText" text="Mensajes directos              " />
+                        <ToggleSwitch fx:id="groupNotis" styleClass="ToggleSwitchBlackText" text="Mensajes grupales             " />
+                        <ToggleSwitch fx:id="comNotis" styleClass="ToggleSwitchBlackText" text="Mensajes de comunidades" />
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#activateAll" styleClass="ConfirmButton" text="Activar todas" />
+                              <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#deactivateAll" styleClass="CancelButton" text="Desactivar todas" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
